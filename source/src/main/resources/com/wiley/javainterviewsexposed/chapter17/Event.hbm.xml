@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.wiley.javainterviewsexposed.chapter17">
+
+    <class name="Event" table="EVENTS">
+        <id name="id" column="ID"/>
+        <property name="venueId" column="venue_id"/>
+        <property name="eventName" column="event_name"/>
+        <property name="eventDate" column="event_date"/>
+    </class>
+
+</hibernate-mapping>

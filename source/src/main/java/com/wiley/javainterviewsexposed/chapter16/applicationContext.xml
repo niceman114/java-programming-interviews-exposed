@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation=" http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="dictionary"
+          class="com.wiley.javainterviewsexposed.chapter16.FileDictionary">
+        <constructor-arg value="/usr/share/dict/words"/>
+    </bean>
+
+    <bean id="spellChecker"
+          class="com.wiley.javainterviewsexposed.chapter16.SpellCheckApplication">
+        <constructor-arg ref="dictionary"/>
+    </bean>
+
+    <bean id="date" class="java.util.Date" scope="prototype"/>
+
+</beans>

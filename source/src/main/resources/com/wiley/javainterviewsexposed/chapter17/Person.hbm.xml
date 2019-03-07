@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.wiley.javainterviewsexposed.chapter17">
+
+    <class name="Person" table="PEOPLE">
+        <id name="id" column="ID">
+            <generator class="native"/>
+        </id>
+        <property name="name"/>
+        <property name="address"/>
+
+        <set name="tickets" table="PERSON_TICKET" cascade="all">
+            <key column="person_id"/>
+            <many-to-many column="ticket_id"
+                          unique="true"
+                          class="Ticket"/>
+        </set>
+
+    </class>
+
+</hibernate-mapping>

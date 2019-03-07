@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<web-app
+        xmlns="http://java.sun.com/xml/ns/javaee"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation=
+                "http://java.sun.com/xml/ns/javaee
+                http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+        metadata-complete="false"
+        version="3.0">
+
+    <servlet>
+        <servlet-name>Echo</servlet-name>
+        <servlet-class>
+            com.wiley.javainterviewsexposed.chapter13.EchoServlet
+        </servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Echo</servlet-name>
+        <url-pattern>/echo/*</url-pattern>
+    </servlet-mapping>
+
+</web-app>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<web-app
+        xmlns="http://java.sun.com/xml/ns/javaee"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation=
+                "http://java.sun.com/xml/ns/javaee
+                http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+        metadata-complete="false"
+        version="3.0">
+
+    <servlet>
+        <servlet-name>Application</servlet-name>
+        <servlet-class>com.example.ApplicationServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>AdminConsole</servlet-name>
+        <servlet-class>com.example.AdminConsoleServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AdminConsole</servlet-name>
+        <url-pattern>/admin/*</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Application</servlet-name>
+        <url-pattern>/*</url-pattern>
+    </servlet-mapping>
+
+</web-app>

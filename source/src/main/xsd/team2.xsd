@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="Player">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="Name" type="xs:string"/>
+                <xs:element name="Position" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="Players">
+        <xs:complexType>
+            <xs:sequence minOccurs="2" maxOccurs="11">
+                <xs:element ref="Player"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="Team">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="Name" type="xs:string"/>
+                <xs:element name="DateFounded" type="xs:date"/>
+                <xs:element ref="Players"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

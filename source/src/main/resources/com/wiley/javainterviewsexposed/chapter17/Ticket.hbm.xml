@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.wiley.javainterviewsexposed.chapter17">
+
+    <class name="Ticket" table="TICKETS">
+        <id name="id" column="ID"/>
+        <many-to-one name="event"
+                     class="Event"
+                     column="event_id"
+                     cascade="all"
+                     not-null="true"
+                     lazy="true"/>
+    </class>
+
+</hibernate-mapping>

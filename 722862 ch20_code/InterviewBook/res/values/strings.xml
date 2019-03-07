@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Interview Book</string>
+
+    <string name="bt_recipe">Recipe</string>
+    <string name="bt_recipe_frag">Recipe as fragments</string>
+    
+    <string name="bt_button_on_bottom">Button on bottom</string>
+    <string name="bt_button_in_front">Button in front</string>
+    
+    <string name="bt_location">Location</string>
+    
+    <string name="bt_share_intent_sender">Send share intent</string>
+    <string name="bt_share">Share</string>
+    <string name="bt_cooking_chat">Cooking chat service</string>
+    
+    <string name="bt_send_message">Send message</string>
+    
+    <string name="bt_start_backup_service">Start recipe backup</string>
+    
+    <string name="share_intent_receiver_label">Share with us</string>
+    <string name="share_intent_sender">Share Intent</string>
+    
+    <string name="recipe_list">Recipe List</string>
+    <string name="recipe_detail">Recipe Detail</string>
+
+    <string name="recipe_fragment">Recipe As Fragment</string>
+
+    <string name="take_picture_bottom">Take Picture Button On Bottom</string>
+    <string name="take_picture">Take Picture</string>
+    
+    <string name="location_activity">Location Sensing</string>
+    <string name="cooking_chat_launcher">Cooking Chat Messager</string>
+</resources>

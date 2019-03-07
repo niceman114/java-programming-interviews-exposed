@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Team xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="team2.xsd">
+    <Name>AllStars</Name>
+    <DateFounded>2001-09-15</DateFounded>
+    <Players>
+        <Player>
+            <Name>Adam Smith</Name>
+            <Position>Goal</Position>
+        </Player>
+        <Player>
+            <Name>Barry Jenkins</Name>
+            <Position>Defence</Position>
+        </Player>
+    </Players>
+</Team>

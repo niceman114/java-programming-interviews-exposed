@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.wiley.acinginterview"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <uses-sdk
+        android:minSdkVersion="11"
+        android:targetSdkVersion="18" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".share.ShareIntentSender"
+            android:label="@string/share_intent_sender" >
+        </activity>
+        <activity
+            android:name=".share.ShareIntentActivityReceiver"
+            android:label="@string/share_intent_receiver_label" >
+            <intent-filter>
+                <action android:name="android.intent.action.SEND" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:mimeType="text/*" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".recipe.RecipeList"
+            android:label="@string/recipe_list" >
+        </activity>
+        <activity
+            android:name=".recipe.RecipeDetail"
+            android:label="@string/recipe_detail" >
+        </activity>
+        <activity
+            android:name=".recipe.frag.RecipeViewAsFragments"
+            android:label="@string/recipe_fragment" >
+        </activity>
+        <activity
+            android:name=".takepicture.TakePictureActivity"
+            android:label="@string/take_picture" >
+        </activity>
+        <activity
+            android:name=".takepicture.TakePictureActivityButtonOnBottom"
+            android:label="@string/take_picture_bottom" >
+        </activity>
+        <activity
+            android:name=".service.CookingChatLauncher"
+            android:label="@string/cooking_chat_launcher" >
+        </activity>
+        <activity
+            android:name=".location.LocationActivity"
+            android:label="@string/location_activity" >
+        </activity>
+
+        <!-- for receiving network broadcasts -->
+        <receiver android:name=".service.RecipeBackupServiceDoneReceiver">
+            <intent-filter>
+                <action android:name="BACKUP_COMPLETE" />
+            </intent-filter>
+        </receiver>
+
+        <receiver android:name=".receiver.NetworkBroadcastReceiver" >
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+
+        <service android:name=".service.RecipeBackupService" />
+        
+        <service android:name=".service.CookingChatService" />
+        
+    </application>
+
+</manifest>

@@ -1,0 +1,17 @@
+<project name="ExampleAntBuildFile" default="package-jar" basedir=".">
+
+    <target name="init">
+        <mkdir dir="ant-output"/>
+        <mkdir dir="ant-test-output"/>
+    </target>
+
+    <target name="compile" depends="init">
+        <javac srcdir="src/main/java" destdir="ant-output"/>
+        <javac srcdir="src/test/java" destdir="ant-test-output"/>
+    </target>
+
+    <target name="package-jar" depends="compile">
+        <jar jarfile="Example.jar" basedir="ant-output"/>
+    </target>
+
+</project>

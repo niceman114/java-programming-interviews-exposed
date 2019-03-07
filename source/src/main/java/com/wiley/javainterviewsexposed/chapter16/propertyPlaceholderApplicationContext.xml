@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation=" http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+        <property
+            name="location"
+            value="/com/wiley/javainterviewsexposed/chapter16/environment.properties"/>
+        <property name="placeholderPrefix" value="$property{"/>
+        <property name="placeholderSuffix" value="}"/>
+    </bean>
+
+    <bean class="com.wiley.javainterviewsexposed.chapter16.ServerSetup">
+        <constructor-arg value="$property{server.hostname}"/>
+    </bean>
+
+</beans>
